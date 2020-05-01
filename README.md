@@ -40,3 +40,9 @@ def compile_something(filename):
 compile_something("example.txt")
 ```
 
+Installation
+------------
+
+```sh
+pip install git+https://github.com/maxdoom-com/tinypreprocessor
+```
