@@ -30,12 +30,13 @@ def compile_something(filename):
     
     tpp = PreProcessor(suffix=".txt")
     tpp.load(filename)
-    tmpfilename = preproc.done()
+    tmpfilename = tpp.done()
     
-    # do stuff with tmpfilename
-    # ...
+    with open(tmpfilename, "r") as f:
+        pass # do stuff with tmpfilename
     
-    # the temporary file will be deleted on the end of this procedure
+    # the temporary file will be deleted as soon
+    # as the PreProcessor (tpp) object ist deleted
 
 compile_something("example.txt")
 ```
